@@ -1,8 +1,6 @@
 # MiniTFT
 A minimal SPI driver for 240x240 ST7789 displays, designed as a replacement for the `Adafruit_GFX` + `Adafruit_ST7789` + `Adafruit_BusIO` stack in projects where those libraries exceed available flash memory (e.g., ATmega328 / Arduino Uno with 32 KB of flash).
-
 It supports only the essentials for simple information or diagnostic displays: drawing filled rectangles and lines, and rendering text using a compact built-in 5x7 font (uppercase letters, numbers, and basic punctuation; lowercase letters are automatically converted to uppercase).
-
 The class inherits from `Print`, so `print()` and `println()` work with all standard overloads—numbers, `String` objects, `F()`-macro strings from PROGMEM, etc.—without the need for manual code duplication.
 -------------------------------------------------------------------------
 Минимальный SPI-драйвер для экранов ST7789 240x240, написанный как замена
