@@ -1,10 +1,15 @@
 #MiniTFT ST7789
 
+<img src="view1.png" width="400" alt="MiniTFT ST7789">
+
 A minimal SPI driver for 240x240 ST7789 displays, designed as a replacement for the `Adafruit_GFX` + `Adafruit_ST7789` + `Adafruit_BusIO` stack in projects where those libraries exceed available flash memory (e.g., ATmega328 / Arduino Uno with 32 KB of flash).
 It supports only the essentials for simple information or diagnostic displays: drawing filled rectangles and lines, and rendering text using a compact built-in 5x7 font (uppercase letters, numbers, and basic punctuation; lowercase letters are automatically converted to uppercase).
 The class inherits from `Print`, so `print()` and `println()` work with all standard overloads—numbers, `String` objects, `F()`-macro strings from PROGMEM, etc.—without the need for manual code duplication.
 
+Written for, and used by, the **ArduinoLab** board project: [pav2000/LabMaketUNO](https://github.com/pav2000/LabMaketUNO).
+
 -------------------------------------------------------------------------
+
 Минимальный SPI-драйвер для экранов ST7789 240x240, написанный как замена
 связке `Adafruit_GFX + Adafruit_ST7789 + Adafruit_BusIO` для проектов, где
 эти библиотеки не влезают во флеш-память (например, ATmega328 / Arduino Uno,
@@ -18,6 +23,9 @@ The class inherits from `Print`, so `print()` and `println()` work with all stan
 Класс наследует `Print`, поэтому `print()` / `println()` работают со всеми
 стандартными перегрузками — числа, `String`, `F()`-строки из PROGMEM и т.д.
 — без ручного дублирования кода.
+
+Написана для платы **ArduinoLab** и используется в её репозитории:
+[pav2000/LabMaketUNO](https://github.com/pav2000/LabMaketUNO).
 
 ## Установка
 
@@ -117,3 +125,10 @@ tft.setOffset(0, 0);        // смещение X/Y в CASET/RASET
 Цветовые константы: `MTFT_BLACK`, `MTFT_WHITE`, `MTFT_RED`, `MTFT_GREEN`,
 `MTFT_BLUE`, `MTFT_CYAN`, `MTFT_MAGENTA`, `MTFT_YELLOW`, `MTFT_GREY`
 (значения RGB565, совпадают с `ST77XX_*` из Adafruit-библиотек).
+
+## Где используется / Used in
+
+[pav2000/LabMaketUNO](https://github.com/pav2000/LabMaketUNO) — плата ArduinoLab
+(Arduino Uno shield с экраном и набором датчиков), для которой эта библиотека
+и была написана. / The ArduinoLab board (Arduino Uno shield with a display and
+a set of sensors) this library was written for.
